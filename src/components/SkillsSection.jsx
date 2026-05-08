@@ -54,6 +54,7 @@ const categories = [
       { name: "Better Auth" },
       { name: "Google OAuth" },
       { name: "Vercel" },
+      { name: "Netlify" },
     ],
   },
 ];
