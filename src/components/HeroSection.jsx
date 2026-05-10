@@ -4,7 +4,7 @@ import { Button } from "@heroui/react";
 import Link from "next/link";
 import heroAnimation from '@/assets/WelcomeAnimation.json'
 // import { Player } from "@lottiefiles/react-lottie-player";
-import logo from '@/assets/mwlight.svg'
+
 import Image from "next/image";
 import dynamic from "next/dynamic";
 
@@ -14,32 +14,15 @@ const Player = dynamic(
 );
 
 
+
+
 const HeroSection =  () => {
   return (
-    <div className=" bg-[#0f0f0d] min-h-screen">
+    <div className="bg-[#0f0f0d]  min-h-screen">
        <section className="w-11/12 mx-auto  flex flex-col items-center px-6 md:px-16 lg:px-24">
 
         <div className="w-full mt-4">
-          {/* logo + Status badge*/}
-          <div className="flex justify-between items-center">
-           
-          <div className="flex items-center gap-2 w-fit">
-            <span className="w-2 h-2 rounded-full bg-[#00E676] animate-pulse" />
-            <span className="font-mono text-xs text-[#00E676]/70 tracking-widest uppercase">
-              available for work
-            </span>
-          </div>
-            <div>
-              <Image 
-              src={logo}
-              width={100}
-              height={100}
-              alt="logo"
-              className="w-16"
-              />
-            </div>
-
-          </div>
+          
         </div>
       <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-0 items-center mt-6">
 
@@ -66,6 +49,9 @@ const HeroSection =  () => {
            
           </div>
         </div>
+
+
+
 
          {/* ── bottom: Text Content ── */}
         <div className="flex flex-col gap-6 order-2 lg:order-1">

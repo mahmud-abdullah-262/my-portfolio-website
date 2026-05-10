@@ -9,14 +9,14 @@ import emailjs from "@emailjs/browser";
 import Link from "next/link";
 
 const EMAILJS_SERVICE_ID = "service_8u93txt";
-const EMAILJS_TEMPLATE_ID = "js8eg9a";
+const EMAILJS_TEMPLATE_ID = "template_6bam81u";
 const EMAILJS_PUBLIC_KEY = "8u-v09K3qT4LQvVWX";
 
 const contactInfo = [
   {
     label: "Email",
-    value: "abdullah624683@gmail.com",
-    href: "mailto:abdullah624683@gmail.com",
+    value: "citclassmahmud@gmail.com",
+    href: "mailto:citclassmahmud@gmail.com",
     icon: "✉",
     note: "Reply within 24hrs",
     color: "#00E676",
