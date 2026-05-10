@@ -3,11 +3,15 @@
 import { Button } from "@heroui/react";
 import Link from "next/link";
 import heroAnimation from '@/assets/WelcomeAnimation.json'
-import { Player } from "@lottiefiles/react-lottie-player";
+// import { Player } from "@lottiefiles/react-lottie-player";
 import logo from '@/assets/mwlight.svg'
 import Image from "next/image";
+import dynamic from "next/dynamic";
 
-
+const Player = dynamic(
+  () => import('@lottiefiles/react-lottie-player').then(mod => mod.Player),
+  { ssr: false }
+);
 
 
 const HeroSection =  () => {

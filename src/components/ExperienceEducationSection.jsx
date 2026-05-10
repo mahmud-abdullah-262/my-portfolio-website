@@ -139,7 +139,7 @@ const education = [
     year: "2022 – Now",
     logo: "/logos/homeo.png",
     accentColor: "#00E676",
-    generic: true,
+    generic: false,
   },
   {
     id: 7,
@@ -188,7 +188,7 @@ function ExperienceCard({ item, isLast }) {
   return (
     <div className="relative flex gap-5 group">
       {/* Timeline spine */}
-      <div className="flex flex-col items-center flex-shrink-0">
+      <div className="flex flex-col items-center shrink-0">
         <div
           className="w-3 h-3 rounded-full mt-1 z-10 ring-4 ring-[#0f0f0d] transition-transform duration-300 group-hover:scale-125"
           style={{ backgroundColor: item.accentColor }}
@@ -212,7 +212,7 @@ function ExperienceCard({ item, isLast }) {
         {/* Top row: logo + text + badge */}
         <div className="flex items-start gap-3">
           {/* Logo — 14x14 (56px) */}
-          <div className="w-14 h-14 flex-shrink-0 rounded-sm overflow-hidden">
+          <div className="w-14 h-14 shrink-0 rounded-sm overflow-hidden">
             <LogoBox item={item} />
           </div>
 
