@@ -82,15 +82,19 @@ const HeroSection =  () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col flex-wrap gap-3 pt-2">
+         <Link 
+         href="#projects"
+         >
             <Button
               as={Link}
-              href="#projects"
+              
               size="lg"
               className="bg-[#00E676] text-[#0a1f10] font-mono font-bold w-66 hover:bg-[#00C853] transition-colors px-8"
               radius="sm"
             >
               Browse Projects
             </Button>
+         </Link>
             <div className="flex gap-2">
             
              <Link
