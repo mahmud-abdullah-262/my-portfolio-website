@@ -86,7 +86,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="bg-[#0f0f0d] py-24 px-6 md:px-16 lg:px-24">
+    <section id="contact" className=" py-24 px-6 md:px-16 lg:px-24">
       <div className="w-full max-w-7xl mx-auto">
 
         {/* Section label */}

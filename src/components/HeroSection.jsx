@@ -18,7 +18,7 @@ const Player = dynamic(
 
 const HeroSection =  () => {
   return (
-    <div className="bg-[#0f0f0d]  min-h-screen">
+    <div className="  min-h-screen">
        <section className="w-11/12 mx-auto  flex flex-col items-center px-6 md:px-16 lg:px-24">
 
         <div className="w-full mt-4">
@@ -61,7 +61,7 @@ const HeroSection =  () => {
 
           {/* Hook line */}
           <div>
-            <h1 className="font-mono text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight tracking-tight">
+            <h1 className="font-mono text-5xl md:text-5xl lg:text-6xl font-black text-white leading-tight tracking-tight">
               <span className="text-[#00E676]">›_ </span>
               Where{" "}
               

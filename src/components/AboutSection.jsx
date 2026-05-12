@@ -11,7 +11,7 @@ import MyPhoto2 from '@/assets/myprofilebw.png'
 
 export default function AboutSection() {
   return (
-    <section id="about" className="bg-[#0f0f0d] py-24 px-6 md:px-16 lg:px-24">
+    <section id="about" className=" py-24 px-6 md:px-16 lg:px-24">
       <div className="w-full max-w-7xl mx-auto">
 
         {/* Section label */}

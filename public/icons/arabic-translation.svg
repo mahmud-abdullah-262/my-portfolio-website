@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Circular swap arrows -->
+  <path d="M32 10 A22 22 0 1 1 10 32" stroke="#FFD600" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <path d="M32 10 A22 22 0 0 0 54 32" stroke="#FFD60060" stroke-width="2" stroke-linecap="round" fill="none" stroke-dasharray="4 3"/>
+  <!-- Arrow head top -->
+  <path d="M28 6 L32 10 L36 6" stroke="#FFD600" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <!-- Arrow head right -->
+  <path d="M58 28 L54 32 L58 36" stroke="#FFD60060" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <!-- Arabic ع character -->
+  <text x="24" y="37" font-family="serif" font-size="18" fill="#FFD600" font-weight="bold">ع</text>
+</svg>

@@ -186,7 +186,7 @@ function LogoBox({ item }) {
 // ── EXPERIENCE CARD ────────────────────────────────────────────────────────
 function ExperienceCard({ item, isLast }) {
   return (
-    <div className="relative flex gap-5 group">
+    <div className="relative flex gap-5 group backdrop-blur-[1.5px]">
       {/* Timeline spine */}
       <div className="flex flex-col items-center shrink-0">
         <div
@@ -268,7 +268,7 @@ function ExperienceCard({ item, isLast }) {
 // ── EDUCATION CARD ─────────────────────────────────────────────────────────
 function EducationCard({ item, isLast }) {
   return (
-    <div className="relative flex gap-5 group">
+    <div className="relative flex gap-5 group backdrop-blur-[1.5px]">
       {/* Timeline spine */}
       <div className="flex flex-col items-center flex-shrink-0">
         <div
@@ -333,7 +333,7 @@ function EducationCard({ item, isLast }) {
 // ── MAIN SECTION ───────────────────────────────────────────────────────────
 export default function ExperienceEducationSection() {
   return (
-    <section id="experience" className="bg-[#0f0f0d] py-24 px-6 md:px-16 lg:px-24">
+    <section id="experience" className=" py-24 px-6 md:px-16 lg:px-24">
       <div className="w-full max-w-7xl mx-auto">
 
         {/* Section label */}

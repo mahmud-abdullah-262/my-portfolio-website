@@ -140,7 +140,7 @@ export default function ProjectsSection() {
   };
 
   return (
-    <section id="projects" className="bg-[#0f0f0d] py-24 px-6 md:px-16 lg:px-24">
+    <section id="projects" className=" py-24 px-6 md:px-16 lg:px-24">
       <div className="w-full max-w-7xl mx-auto">
 
         {/* Section label */}
@@ -216,7 +216,7 @@ export default function ProjectsSection() {
 
 function ProjectCard({ project }) {
   return (
-    <div className="group flex flex-col border border-[#00E676]/10 rounded-sm bg-[#00E676]/[0.02] hover:border-[#00E676]/30 hover:bg-[#00E676]/[0.05] transition-all duration-300">
+    <div className="group flex flex-col border border-[#00E676]/10 rounded-sm bg-[#00E676]/[0.02] hover:border-[#00E676]/30 hover:bg-[#00E676]/[0.05] transition-all duration-300 backdrop-blur-[1.5px]">
 
       {/* Image */}
       <div className="relative w-full h-54 overflow-hidden rounded-t-sm bg-[#1a1a18]">

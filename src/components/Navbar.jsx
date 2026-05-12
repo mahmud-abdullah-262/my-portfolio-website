@@ -18,7 +18,7 @@ const navLinks = [
 const Navbar = () => {
   return (
     <>
-    <div className='w-full h-30 border  absolute -z-10 bg-[#0f0f0d]'></div>
+    <div className='w-full h-30   absolute -z-10 '></div>
      <div className='bg-transparent sticky top-0 z-50 backdrop-blur-sm '>
     <div className="flex justify-between items-center  py-4 w-11/12 mx-auto">
            

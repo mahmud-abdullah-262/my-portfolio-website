@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Left page -->
+  <rect x="6" y="12" width="24" height="40" rx="2.5" fill="#E040FB12" stroke="#E040FB" stroke-width="1.5"/>
+  <!-- Right page -->
+  <rect x="34" y="12" width="24" height="40" rx="2.5" fill="#E040FB12" stroke="#E040FB" stroke-width="1.5"/>
+  <!-- Arrow left-right in center -->
+  <path d="M27 30 L37 30" stroke="#E040FB" stroke-width="2" stroke-linecap="round"/>
+  <path d="M24 27 L27 30 L24 33" stroke="#E040FB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M40 27 L37 30 L40 33" stroke="#E040FB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Urdu ا character on left -->
+  <text x="12" y="37" font-family="serif" font-size="20" fill="#E040FB" font-weight="bold">ا</text>
+  <!-- Latin A on right -->
+  <text x="40" y="37" font-family="serif" font-size="20" fill="#E040FB" font-weight="bold">A</text>
+</svg>

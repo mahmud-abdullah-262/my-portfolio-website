@@ -6,7 +6,7 @@ import GitHubStatsSection from "@/components/GitHubStatsSection";
 import HeroSection from "@/components/HeroSection";
 import Navbar from "@/components/Navbar";
 import ProjectsSection from "@/components/ProjectsSection";
-import SkillsSection from "@/components/SkillsSection";
+import SkillsSection2 from "@/components/SkillsSection2";
 
 
 export default function Home() {
@@ -15,7 +15,8 @@ export default function Home() {
       <Navbar></Navbar>
       <HeroSection></HeroSection>
       <AboutSection></AboutSection>
-      <SkillsSection/>
+     
+      <SkillsSection2/>
       <ProjectsSection/>
       <ExperienceEducationSection/>
       <GitHubStatsSection/>
