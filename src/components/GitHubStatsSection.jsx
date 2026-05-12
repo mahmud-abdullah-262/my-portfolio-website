@@ -52,7 +52,7 @@ export default function GitHubStatsSection() {
         <div className="w-11/12 mx-auto flex flex-col gap-6">
 
           {/* ── ROW 1: Stats + Languages ── */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 backdrop-blur-[1.5px]">
 
             {/* Stats cards */}
             <div className="rounded-sm border border-[#00E676]/10 bg-[#00E676]/[0.02] p-5 flex flex-col gap-4">
@@ -152,7 +152,7 @@ export default function GitHubStatsSection() {
           </div>
 
           {/* ── 100 PROJECTS CHALLENGE ── */}
-          <div className="rounded-sm border border-[#00E676]/20 bg-[#00E676]/[0.03] p-6">
+          <div className="rounded-sm border border-[#00E676]/20 bg-[#00E676]/[0.03] p-6 backdrop-blur-[1.5px]">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
               <div>
                 <div className="flex items-center gap-2 mb-1">
@@ -218,7 +218,7 @@ export default function GitHubStatsSection() {
           </div>
 
           {/* ── STREAK ── */}
-          <div className="rounded-sm border border-[#00E676]/10 bg-[#00E676]/[0.02] p-4 flex items-center justify-center">
+          <div className="rounded-sm border border-[#00E676]/10 bg-[#00E676]/[0.02] p-4 flex items-center justify-center backdrop-blur-[1.5px]">
             <Image
               src={STREAK_URL}
               alt="GitHub Streak"
@@ -230,7 +230,7 @@ export default function GitHubStatsSection() {
           </div>
 
           {/* ── CONTRIBUTION GRAPH ── */}
-          <div className="rounded-sm border border-[#00E676]/10 bg-[#00E676]/[0.02] p-5">
+          <div className="rounded-sm border border-[#00E676]/10 bg-[#00E676]/[0.02] p-5 backdrop-blur-[1.5px]">
             <p className="font-mono text-xs text-[#00E676]/40 mb-4 tracking-widest uppercase">
               // contribution graph
             </p>

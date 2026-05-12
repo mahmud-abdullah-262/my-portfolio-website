@@ -316,14 +316,18 @@ export default function SkillsSection() {
         </div>
 
         {/* ── Language Section ── */}
-        <div className="w-11/12 mx-auto mt-10 backdrop-blur-[1.5px]">
-          <div
-            className="rounded-sm border p-6 flex flex-col gap-6"
-            style={{
-              borderColor: "#7C3AED20",
-              background: "#7C3AED05",
-            }}
-          >
+        <div className="w-11/12 mx-auto mt-10 backdrop-blur-[1.5px]"
+        
+        >
+         <div
+  className="glow-card rounded-sm border p-6 flex flex-col gap-6"
+  style={{
+    borderColor: "#7C3AED20",
+    background: "#7C3AED05",
+    "--glow": `0 0 20px #7C3AED15, 0 0 60px #7C3AED08, inset 0 0 20px #7C3AED05`,
+    "--glow-border": "#7C3AED40",
+  }}
+>
             {/* Header */}
             <div className="border-b pb-4" style={{ borderColor: "#7C3AED15" }}>
               <h3 className="font-mono font-bold text-base tracking-wide" style={{ color: "#A78BFA" }}>
@@ -350,13 +354,14 @@ export default function SkillsSection() {
 
 function CategoryCard({ cat }) {
   return (
-    <div
-      className="rounded-sm backdrop-blur-[1.5px] border p-6 flex flex-col gap-6"
-      style={{
-        borderColor: `${cat.accent}20`,
-        background: `${cat.accent}05`,
-      }}
-    >
+  <div
+  className="glow-card rounded-sm backdrop-blur-[1.5px] border p-6 flex flex-col gap-6"
+  style={{
+    borderColor: `${cat.accent}20`,
+    background: `${cat.accent}05`,
+    "--glow": `0 0 20px ${cat.accent}15, 0 0 60px ${cat.accent}08, inset 0 0 20px ${cat.accent}05`,
+    "--glow-border": `${cat.accent}40`,
+  }}>
       {/* Card header */}
       <div className="border-b pb-4" style={{ borderColor: `${cat.accent}15` }}>
         <h3

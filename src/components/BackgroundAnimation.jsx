@@ -45,7 +45,7 @@ export default function BackgroundAnimation() {
            Large radial blur — no canvas, no JS, GPU opacity only */
         .orb {
           border-radius: 50%;
-          filter: blur(120px);
+         
           opacity: 0;
           animation-timing-function: ease-in-out;
           animation-iteration-count: infinite;

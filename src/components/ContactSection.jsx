@@ -116,7 +116,7 @@ export default function ContactSection() {
 
             {/* Availability */}
             <div
-              className="p-4 rounded-sm border border-[#00E676]/15 bg-[#00E676]/[0.03]"
+              className="p-4 rounded-sm border border-[#00E676]/15 bg-[#00E676]/[0.03] backdrop-blur-[1.5px]"
             >
               <div className="flex items-center gap-2 mb-3">
                 <span className="w-2 h-2 rounded-full bg-[#00E676] animate-pulse" />
@@ -137,7 +137,7 @@ export default function ContactSection() {
             </div>
 
             {/* Location */}
-            <div className="flex items-center gap-3 px-1">
+            <div className="flex items-center gap-3 px-1 ">
               <span className="text-[#00E676]/60 text-sm">◎</span>
               <span className="font-mono text-sm text-[#8a9a8e]">
                 Dhaka, Bangladesh
@@ -152,7 +152,7 @@ export default function ContactSection() {
                   href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex items-center gap-4 p-4 rounded-sm border transition-all duration-300 hover:translate-x-1"
+                  className="group flex items-center gap-4 p-4 rounded-sm border transition-all duration-300 hover:translate-x-1 backdrop-blur-[1.5px]"
                   style={{
                     borderColor: `${item.color}15`,
                     background: `${item.color}05`,
@@ -227,7 +227,7 @@ export default function ContactSection() {
                   onChange={handleChange}
                   required
                   placeholder="Abdullah Al Mahmud"
-                  className="w-full bg-[#1a1a18] border border-[#00E676]/15 rounded-sm px-4 py-3 font-mono text-sm text-white placeholder:text-[#8a9a8e]/30 focus:outline-none focus:border-[#00E676]/50 transition-colors duration-200"
+                  className="w-full bg-[#1a1a18] border border-[#00E676]/15 rounded-sm px-4 py-3 font-mono text-sm text-white placeholder:text-[#8a9a8e]/30 backdrop-blur-[1.5px] focus:outline-none focus:border-[#00E676]/50 transition-colors duration-200"
                 />
               </div>
 
@@ -243,7 +243,7 @@ export default function ContactSection() {
                   onChange={handleChange}
                   required
                   placeholder="you@example.com"
-                  className="w-full bg-[#1a1a18] border border-[#00E676]/15 rounded-sm px-4 py-3 font-mono text-sm text-white placeholder:text-[#8a9a8e]/30 focus:outline-none focus:border-[#00E676]/50 transition-colors duration-200"
+                  className="w-full backdrop-blur-[1.5px] bg-[#1a1a18] border border-[#00E676]/15 rounded-sm px-4 py-3 font-mono text-sm text-white placeholder:text-[#8a9a8e]/30 focus:outline-none focus:border-[#00E676]/50 transition-colors duration-200"
                 />
               </div>
 
@@ -259,7 +259,7 @@ export default function ContactSection() {
                   required
                   rows={6}
                   placeholder="Hi Abdullah, I'd like to work with you on..."
-                  className="w-full bg-[#1a1a18] border border-[#00E676]/15 rounded-sm px-4 py-3 font-mono text-sm text-white placeholder:text-[#8a9a8e]/30 focus:outline-none focus:border-[#00E676]/50 transition-colors duration-200 resize-none"
+                  className="w-full backdrop-blur-[1.5px] bg-[#1a1a18] border border-[#00E676]/15 rounded-sm px-4 py-3 font-mono text-sm text-white placeholder:text-[#8a9a8e]/30 focus:outline-none focus:border-[#00E676]/50 transition-colors duration-200 resize-none"
                 />
               </div>
 

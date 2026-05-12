@@ -18,7 +18,7 @@ const Player = dynamic(
 
 const HeroSection =  () => {
   return (
-    <div className="  min-h-screen">
+    <div id="home"  className="  min-h-screen">
        <section className="w-11/12 mx-auto  flex flex-col items-center px-6 md:px-16 lg:px-24">
 
         <div className="w-full mt-4">
