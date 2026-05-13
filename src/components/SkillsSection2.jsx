@@ -264,7 +264,11 @@ function LanguageCard({ lang }) {
               />
             </div>
             <span className="font-mono text-[9px] w-6" style={{ color: `${lang.color}80` }}>
-              {lang.skills[ax]}%
+              {lang.skills[ax] >= 80 ? 'Good':
+              lang.skills[ax] >= 50 ? 
+              'Okay' : 
+              lang.skills[ax] >= 30 ? 'Minimum' : 'None'
+              }
             </span>
           </div>
         ))}
