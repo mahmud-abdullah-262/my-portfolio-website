@@ -16,7 +16,8 @@ const data = await res.json();
 
 return data
 }
-const projects = await getProjects()
+const data = await getProjects()
+const projects = data.reverse()
 
 
 //

@@ -2,6 +2,7 @@
 import AboutSection from "@/components/AboutSection";
 import ContactSection from "@/components/ContactSection";
 import ExperienceEducationSection from "@/components/ExperienceEducationSection";
+import FeaturedProjectsCarousel from "@/components/FeaturedProjectsCarousel";
 import Footer from "@/components/Footer";
 import GitHubStatsSection from "@/components/GitHubStatsSection";
 import HeroSection from "@/components/HeroSection";
@@ -12,6 +13,15 @@ import SkillsSection2 from "@/components/SkillsSection2";
 import Lenis from "lenis";
 import { useEffect } from "react";
 
+
+const getProjects = async () => {
+  const res = await fetch("https://portfolio-project-server-production.up.railway.app/projects");
+const data = await res.json();
+
+
+return data
+}
+const projects = await getProjects()
 
 export default function Home() {
   useEffect(() => {
@@ -29,7 +39,7 @@ export default function Home() {
      
       <HeroSection></HeroSection>
       <AboutSection></AboutSection>
-     
+     <FeaturedProjectsCarousel data={projects}/>
       <SkillsSection2/>
       <ProjectsSection/>
       <ExperienceEducationSection/>
