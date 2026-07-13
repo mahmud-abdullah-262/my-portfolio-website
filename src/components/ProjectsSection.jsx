@@ -8,16 +8,17 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import {projects as projectData} from '../../data'
 
-const getProjects = async () => {
-  const res = await fetch("https://portfolio-project-server-production.up.railway.app/projects");
-const data = await res.json();
+const projects = projectData.reverse()
+// const getProjects = async () => {
+//   const res = await fetch("https://portfolio-project-server-production.up.railway.app/projects");
+// const data = await res.json();
 
 
-return data
-}
-const data = await getProjects()
-const projects = data.reverse()
+// return data
+// }
+
 
 
 //
@@ -230,10 +231,10 @@ function ProjectCard({ project }) {
         {/* Image overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#0f0f0d]/80 to-transparent opacity-60" />
 
-        {/* Top-right corner tag */}
+        {/* Top-right corner tag
         <div className="absolute top-3 right-3 font-mono text-[10px] px-2 py-1 bg-[#0f0f0d]/80 border border-[#00E676]/20 text-[#00E676]/60 rounded-sm">
           #{String(project.id).padStart(2, "0")}
-        </div>
+        </div> */}
       </div>
 
       {/* Content */}

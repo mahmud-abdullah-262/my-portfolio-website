@@ -12,16 +12,10 @@ import ScrollToTop from "@/components/ScrollToTop";
 import SkillsSection2 from "@/components/SkillsSection2";
 import Lenis from "lenis";
 import { useEffect } from "react";
+import {projects as projectData} from '../../data'
 
 
-const getProjects = async () => {
-  const res = await fetch("https://portfolio-project-server-production.up.railway.app/projects");
-const data = await res.json();
-
-
-return data
-}
-const projects = await getProjects()
+const projects = projectData
 
 export default function Home() {
   useEffect(() => {

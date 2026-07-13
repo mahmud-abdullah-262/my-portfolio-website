@@ -29,7 +29,7 @@ import Link from "next/link";
 
 
 export default  function FeaturedProjectsCarousel({ data}) {
-  const projects = [...data].reverse()
+  const projects = data.reverse()
   const slides = projects.slice(0, 3);
   const total = slides.length;
 
