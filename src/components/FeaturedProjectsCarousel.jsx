@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useRef, useCallback, useMemo } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { Button } from "@heroui/react";
 import {
@@ -29,8 +29,11 @@ import Link from "next/link";
 
 
 export default  function FeaturedProjectsCarousel({ data}) {
-  const projects = data.reverse()
-  const slides = projects.slice(0, 3);
+const projects = [...data];
+
+const slides = projects.slice(0, 3);
+
+
   const total = slides.length;
 
   const [index, setIndex] = useState(0);
