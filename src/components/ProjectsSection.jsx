@@ -161,7 +161,7 @@ export default function ProjectsSection() {
             <span className="text-[#00E676]">Built</span>
           </h2>
           <p className="font-mono text-sm text-[#8a9a8e] mt-2">
-            // {projects.length} projects — showing {startIndex + 1}–
+            / / {projects.length} projects — showing {startIndex + 1}–
             {Math.min(startIndex + PROJECTS_PER_PAGE, projects.length)}
           </p>
         </div>

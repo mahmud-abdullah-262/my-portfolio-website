@@ -72,7 +72,7 @@ const slides = projects.slice(0, 3);
   };
 
   return (
-    <section className="relative overflow-hidden bg-[#05080a] px-6 py-24 lg:px-16">
+    <section id="projects" className="relative overflow-hidden bg-[#05080a] px-6 py-24 lg:px-16">
       {/* faint dot grid, echoes the rest of the site */}
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.15]"
@@ -118,7 +118,7 @@ const slides = projects.slice(0, 3);
             >
               {/* image — 2/3 width on large screens */}
               <div className="group relative w-full overflow-hidden rounded-xl border border-emerald-400/20 lg:w-2/3">
-                <div className="aspect-[16/10] w-full">
+                <div className="aspect-16/10 w-full">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={project.image}
@@ -160,7 +160,7 @@ const slides = projects.slice(0, 3);
                 </div>
 
                 <div className="flex flex-wrap gap-3 pt-2">
-                  <Link      href={project.liveUrl}>
+                  <Link      href={`/projects/${project.id}`}>
                   <Button
                    
                
@@ -170,26 +170,13 @@ const slides = projects.slice(0, 3);
                     variant="solid"
                     radius="sm"
                     startContent={<ArrowUpRightFromSquare width={16} height={16} />}
-                    className="bg-emerald-400 font-mono text-xs text-black hover:bg-emerald-300"
+                    className="bg-emerald-400 font-mono text-xs text-black hover:bg-emerald-300 py-2 px-4 rounded-sm"
                   >
-                    Live Demo
+                   Show Details
                   </Button>
                   </Link>
                   
-                  <Link href={project.githubUrl}>
-                   <Button
-                 
-                    
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    variant="bordered"
-                    radius="sm"
-                    startContent={<LogoGithub width={16} height={16} />}
-                    className="border-emerald-400/40 font-mono text-xs text-emerald-300 hover:bg-emerald-400/10"
-                  >
-                    View Code
-                  </Button>
-                  </Link>
+           
                  
                 </div>
               </div>

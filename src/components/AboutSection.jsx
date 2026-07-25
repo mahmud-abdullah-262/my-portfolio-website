@@ -126,10 +126,10 @@ export default function AboutSection() {
                 radius="sm"
               >
                 <a
-                href="/MYCV_programing.pdf"
-  download="Abdullah_Al_Mahmud_CV.pdf"
+                href="/Abdullah_Al_Mahmud_FullStack_Resume.pdf"
+  download="Abdullah_Al_Mahmud_FullStack_Resume.pdf"
   className="bg-[#00E676] text-[#0a1f10] font-mono font-bold tracking-wide hover:bg-[#00C853] transition-colors px-8 py-3 text-sm inline-flex items-center rounded-sm"
-                > ↓ Download CV</a>
+                > ↓ Download Resume</a>
                
               </Button>
             </div>

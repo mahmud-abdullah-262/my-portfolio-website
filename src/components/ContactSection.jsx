@@ -105,7 +105,7 @@ export default function ContactSection() {
             <span className="text-[#00E676]">Together</span>
           </h2>
           <p className="font-mono text-sm text-[#8a9a8e] mt-2">
-            // I&apos;m just one message away
+            / / I&apos;m just one message away
           </p>
         </div>
 
@@ -116,7 +116,7 @@ export default function ContactSection() {
 
             {/* Availability */}
             <div
-              className="p-4 rounded-sm border border-[#00E676]/15 bg-[#00E676]/[0.03] backdrop-blur-[1.5px]"
+              className="p-4 rounded-sm border border-[#00E676]/15 bg-[#00E676]/3 backdrop-blur-[1.5px]"
             >
               <div className="flex items-center gap-2 mb-3">
                 <span className="w-2 h-2 rounded-full bg-[#00E676] animate-pulse" />
@@ -168,7 +168,7 @@ export default function ContactSection() {
                 >
                   {/* Icon */}
                   <div
-                    className="w-10 h-10 rounded-sm flex items-center justify-center flex-shrink-0 text-base"
+                    className="w-10 h-10 rounded-sm flex items-center justify-center shrink-0 text-base"
                     style={{
                       background: `${item.color}15`,
                       border: `1px solid ${item.color}25`,
@@ -192,13 +192,13 @@ export default function ContactSection() {
                   </div>
 
                   {/* Note */}
-                  <span className="font-mono text-[10px] text-[#8a9a8e]/40 flex-shrink-0 hidden sm:block">
+                  <span className="font-mono text-[10px] text-[#8a9a8e]/40 shrink-0 hidden sm:block">
                     {item.note}
                   </span>
 
                   {/* Arrow */}
                   <span
-                    className="font-mono text-xs opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0"
+                    className="font-mono text-xs opacity-0 group-hover:opacity-100 transition-opacity shrink-0"
                     style={{ color: item.color }}
                   >
                     ↗
@@ -218,7 +218,7 @@ export default function ContactSection() {
               {/* Name */}
               <div className="flex flex-col gap-1.5">
                 <label className="font-mono text-xs text-[#00E676]/50 tracking-widest uppercase">
-                  // your name
+                  / / your name
                 </label>
                 <input
                   type="text"
@@ -234,7 +234,7 @@ export default function ContactSection() {
               {/* Email */}
               <div className="flex flex-col gap-1.5">
                 <label className="font-mono text-xs text-[#00E676]/50 tracking-widest uppercase">
-                  // your email
+                  / / your email
                 </label>
                 <input
                   type="email"
@@ -250,7 +250,7 @@ export default function ContactSection() {
               {/* Message */}
               <div className="flex flex-col gap-1.5">
                 <label className="font-mono text-xs text-[#00E676]/50 tracking-widest uppercase">
-                  // message
+                  / / message
                 </label>
                 <textarea
                   name="message"

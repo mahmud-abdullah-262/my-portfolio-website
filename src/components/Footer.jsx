@@ -121,7 +121,7 @@ export default function Footer() {
           {/* ── Col 2: Navigation ── */}
           <div className="flex flex-col gap-4">
             <p className="font-mono text-sm text-[#00E676] tracking-widest uppercase">
-              // navigate
+              / / navigate
             </p>
             <div className="grid grid-cols-2 gap-x-4 gap-y-2">
               {navLinks.map((link) => (
@@ -140,7 +140,7 @@ export default function Footer() {
           {/* ── Col 3: Contact info ── */}
           <div className="flex flex-col gap-4">
             <p className="font-mono text-sm text-[#00E676] tracking-widest uppercase">
-              // get in touch
+              / / get in touch
             </p>
             <div className="flex flex-col gap-3">
               <Link

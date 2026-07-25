@@ -35,7 +35,7 @@ export default function Home() {
       <AboutSection></AboutSection>
      <FeaturedProjectsCarousel data={projects}/>
       <SkillsSection2/>
-      <ProjectsSection/>
+      {/* <ProjectsSection/> */}
       <ExperienceEducationSection/>
       <GitHubStatsSection/>
       <ContactSection/>
