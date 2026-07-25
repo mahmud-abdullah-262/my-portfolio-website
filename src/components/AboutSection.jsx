@@ -5,8 +5,8 @@
 import { Button } from "@heroui/react";
 import Image from "next/image";
 import Link from "next/link";
-import MyPhoto1 from '@/assets/myprofile.png'
-import MyPhoto2 from '@/assets/myprofilebw.png'
+import MyPhoto1 from '@/assets/myprofileWhite.png'
+import MyPhoto2 from '@/assets/myprofile.png'
 
 
 export default function AboutSection() {
@@ -40,7 +40,7 @@ export default function AboutSection() {
 
                 Uncomment when image is ready:
                 <Image
-                  src={MyPhoto1}
+                  src={MyPhoto2}
                   alt="Abdullah Al Mahmud"
                   fill
                   className="object-cover"
@@ -69,26 +69,23 @@ export default function AboutSection() {
               </h2>
             </div>
 
-            {/* Story paragraphs */}
-            <div className="flex flex-col gap-4">
+          {/* Story paragraphs */}
+            <div className="flex flex-col gap-3">
               <p className="text-[#8a9a8e] text-sm md:text-base leading-relaxed">
-                My coding journey started with pure curiosity — wondering what really happens
-                behind a click on a website. Where does it go? What runs under the hood?
-                That question had no clear answer for me, until I joined{" "}
-                <span className="text-[#00E676]/70 font-mono">Programming Hero Bootcamp</span>{" "}
-                and found my path.
+                My coding journey began with curiosity — what really happens behind a click?
+                That question led me to{" "}
+                <span className="text-[#00E676]/70 font-mono">Programming Hero Bootcamp</span>,
+                where I built{" "}
+                <span className="text-[#00E676]/70 font-mono">10+ projects</span> and learned how{" "}
+                <span className="text-white/60 font-mono">client</span>,{" "}
+                <span className="text-white/60 font-mono">server</span>, and{" "}
+                <span className="text-white/60 font-mono">database</span> work together.
               </p>
 
               <p className="text-[#8a9a8e] text-sm md:text-base leading-relaxed">
-                The learning days weren&apos;t easy — hours of coding, debugging, failing, then
-                finally succeeding. Now I&apos;m designing my own portfolio from scratch and have
-                completed{" "}
-                <span className="text-[#00E676]/70 font-mono">10+ projects</span>.
-                Today I&apos;m confident — I know the magic that{" "}
-                <span className="text-white/60 font-mono">client</span>,{" "}
-                <span className="text-white/60 font-mono">server</span>, and{" "}
-                <span className="text-white/60 font-mono">database</span>{" "}
-                can create together.
+                I love building things that solve real, everyday problems. Outside code, I write —
+                with pieces published in little magazines — and do translation on the side. At my
+                core, I&apos;m just curious, always up for trying something new.
               </p>
 
               {/* CTA line */}

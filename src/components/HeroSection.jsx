@@ -6,7 +6,7 @@ import Image from "next/image";
 import { FaGithub, FaLinkedin, FaFacebook, FaWhatsapp } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
-import myProfileImg from '@/assets/myprofile-bgnone.png'
+import myProfileImg from '@/assets/myprofilebgonon2.png'
 
 const socialLinks = [
   { name: "GitHub", href: "https://github.com/mahmud-abdullah-262", icon: FaGithub }, // TODO: add your GitHub profile URL
