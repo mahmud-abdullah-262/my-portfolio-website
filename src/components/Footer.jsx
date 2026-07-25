@@ -148,7 +148,7 @@ export default function Footer() {
                 className="font-mono text-xs text-[#d4d4d4] hover:text-[#00E676] transition-colors duration-200 flex items-center gap-2"
               >
                 <span className="text-[#00E676]"><Envelope/></span>
-                citclassmahmud@gmail.com
+                abdullah624683@gmail.com
               </Link>
               <Link
                 href="https://wa.me/8801683367535"

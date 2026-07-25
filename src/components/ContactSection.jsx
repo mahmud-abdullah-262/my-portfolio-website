@@ -15,8 +15,8 @@ const EMAILJS_PUBLIC_KEY = "8u-v09K3qT4LQvVWX";
 const contactInfo = [
   {
     label: "Email",
-    value: "citclassmahmud@gmail.com",
-    href: "mailto:citclassmahmud@gmail.com",
+    value: "abdullah624683@gmail.com",
+    href: "mailto:abdullah624683@gmail.com",
     icon: "✉",
     note: "Reply within 24hrs",
     color: "#00E676",
