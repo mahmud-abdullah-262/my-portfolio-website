@@ -61,18 +61,19 @@ const HeroSection = () => {
             {/* CTA Buttons */}
             <div className="flex flex-col items-center lg:items-start gap-3 pt-2 w-full">
               {/* Download CV Button — Button rendered directly as <a>, no nested anchor */}
-              <div className="flex flex-wrap justify-center lg:justify-start gap-3 pt-1">
-                <Button
-                  as="a"
-                  href="/Abdullah_Al_Mahmud_FullStack_Resume.pdf"
-                  download="Abdullah_Al_Mahmud_FullStack_Resume.pdf"
-                  size="lg"
-                  radius="sm"
-                  className="bg-[#00E676] text-[#0a1f10] font-mono text-[16px] font-bold tracking-wide hover:bg-[#00C853] transition-colors px-7 py-3 rounded-sm"
-                >
-                  ↓ Download Resume
-                </Button>
-              </div>
+             <div className="flex flex-wrap gap-3 pt-1">
+              <Button
+                size="lg"
+                radius="sm"
+              >
+                <a
+                href="/Abdullah_Al_Mahmud_FullStack_Resume.pdf"
+  download="Abdullah_Al_Mahmud_FullStack_Resume.pdf"
+  className="bg-[#00E676] text-[#0a1f10] font-mono font-bold tracking-wide hover:bg-[#00C853] transition-colors px-8 py-3 text-sm inline-flex items-center rounded-sm"
+                > ↓ Download Resume</a>
+               
+              </Button>
+            </div>
 
               {/* Social icon buttons */}
               <div className="flex flex-wrap justify-center lg:justify-start gap-2">
