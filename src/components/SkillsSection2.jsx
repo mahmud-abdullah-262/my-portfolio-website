@@ -3,7 +3,6 @@
 // Theme: Terminal / Dark — matches HeroSection & AboutSection
 
 "use client";
-import { useEffect, useRef, useState } from "react";
 
 const brandColors = {
   HTML: "#E34F26",
@@ -91,205 +90,43 @@ const categories = [
   },
 ];
 
-// Language data
+// Simplified Language Data
 const languages = [
   {
     name: "বাংলা",
-    type: "Native Language",
+    nativeName: "Bangla",
+    level: "Native",
     color: "#00E676",
-    skills: { Speaking: 95, Writing: 95, Listening: 95, Reading: 95 },
   },
   {
     name: "English",
-    type: "Second Language",
+    nativeName: "English",
+    level: "Elementary",
     color: "#61DAFB",
-    skills: { Speaking: 45, Writing: 30, Listening: 75, Reading: 85 },
   },
   {
     name: "العربية",
-    type: "Second Language",
+    nativeName: "Arabic",
+    level: "Semi-Professional",
     color: "#FFD600",
-    skills: { Speaking: 60, Writing: 60, Listening: 75, Reading: 80 },
   },
   {
     name: "اردو",
-    type: "Second Language",
+    nativeName: "Urdu",
+    level: "Semi-Professional",
     color: "#E040FB",
-    skills: { Speaking: 60, Writing: 40, Listening: 75, Reading: 80 },
   },
   {
     name: "हिन्दी",
-    type: "Second Language",
+    nativeName: "Hindi",
+    level: "Elementary",
     color: "#FF9A00",
-    skills: { Speaking: 60, Writing: 0, Listening: 75, Reading: 0 },
   },
 ];
 
-const skillAxes = ["Speaking", "Listening", "Reading", "Writing"];
-
-function RadarChart({ lang, size = 160, animate = false }) {
-  const [progress, setProgress] = useState(animate ? 0 : 1);
-  const center = size / 2;
-  const maxR = size * 0.38;
-  const levels = 4;
-  const axes = skillAxes;
-  const n = axes.length;
-
-  useEffect(() => {
-    if (!animate) return;
-    let start = null;
-    const duration = 900;
-    const raf = (ts) => {
-      if (!start) start = ts;
-      const p = Math.min((ts - start) / duration, 1);
-      setProgress(p);
-      if (p < 1) requestAnimationFrame(raf);
-    };
-    const id = requestAnimationFrame(raf);
-    return () => cancelAnimationFrame(id);
-  }, [animate]);
-
-  const angleOf = (i) => (Math.PI * 2 * i) / n - Math.PI / 2;
-
-  const pointOnAxis = (i, r) => ({
-    x: center + r * Math.cos(angleOf(i)),
-    y: center + r * Math.sin(angleOf(i)),
-  });
-
-  // Grid rings
-  const rings = Array.from({ length: levels }, (_, l) => {
-    const r = (maxR * (l + 1)) / levels;
-    const pts = axes.map((_, i) => pointOnAxis(i, r));
-    return pts.map((p, i) => `${i === 0 ? "M" : "L"}${p.x},${p.y}`).join(" ") + "Z";
-  });
-
-  // Data polygon
-  const dataPath = axes
-    .map((ax, i) => {
-      const val = (lang.skills[ax] / 100) * maxR * progress;
-      const pt = pointOnAxis(i, val);
-      return `${i === 0 ? "M" : "L"}${pt.x},${pt.y}`;
-    })
-    .join(" ") + "Z";
-
-  // Axis lines
-  const axisLines = axes.map((_, i) => {
-    const outer = pointOnAxis(i, maxR);
-    return { x1: center, y1: center, x2: outer.x, y2: outer.y };
-  });
-
-  // Labels
-  const labels = axes.map((ax, i) => {
-    const pt = pointOnAxis(i, maxR + 16);
-    return { label: ax, x: pt.x, y: pt.y };
-  });
-
-  return (
-    <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`}>
-      {/* Grid rings */}
-      {rings.map((d, i) => (
-        <path key={i} d={d} fill="none" stroke={`${lang.color}20`} strokeWidth="1" />
-      ))}
-      {/* Axis lines */}
-      {axisLines.map((l, i) => (
-        <line key={i} {...l} stroke={`${lang.color}25`} strokeWidth="1" />
-      ))}
-      {/* Data fill */}
-      <path d={dataPath} fill={`${lang.color}20`} stroke={lang.color} strokeWidth="1.5" />
-      {/* Data points */}
-      {axes.map((ax, i) => {
-        const val = (lang.skills[ax] / 100) * maxR * progress;
-        const pt = pointOnAxis(i, val);
-        return <circle key={i} cx={pt.x} cy={pt.y} r="3" fill={lang.color} />;
-      })}
-      {/* Labels */}
-      {labels.map((l, i) => (
-        <text
-          key={i}
-          x={l.x}
-          y={l.y}
-          textAnchor="middle"
-          dominantBaseline="middle"
-          fontSize="7"
-          fontFamily="monospace"
-          fill={`${lang.color}99`}
-        >
-          {l.label}
-        </text>
-      ))}
-    </svg>
-  );
-}
-
-function LanguageCard({ lang }) {
-  const ref = useRef(null);
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const obs = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) setVisible(true); },
-      { threshold: 0.3 }
-    );
-    if (ref.current) obs.observe(ref.current);
-    return () => obs.disconnect();
-  }, []);
-
-  return (
-    <div
-      ref={ref}
-      className="rounded-sm border p-4 flex flex-col items-center gap-3 transition-opacity duration-700"
-      style={{
-        borderColor: `${lang.color}25`,
-        background: `${lang.color}06`,
-        opacity: visible ? 1 : 0,
-      }}
-    >
-      <RadarChart lang={lang} size={160} animate={visible} />
-
-      {/* Skill bars */}
-      <div className="w-full flex flex-col gap-1.5 mt-1">
-        {skillAxes.map((ax) => (
-          <div key={ax} className="flex items-center gap-2">
-            <span className="font-mono text-[9px] w-14 text-right" style={{ color: `${lang.color}80` }}>
-              {ax}
-            </span>
-            <div className="flex-1 h-1 rounded-full" style={{ background: `${lang.color}15` }}>
-              <div
-                className="h-full rounded-full transition-all duration-1000"
-                style={{
-                  width: visible ? `${lang.skills[ax]}%` : "0%",
-                  background: lang.color,
-                  transitionDelay: "300ms",
-                }}
-              />
-            </div>
-            <span className="font-mono text-[9px] w-6" style={{ color: `${lang.color}80` }}>
-              {lang.skills[ax] >= 80 ? 'Good':
-              lang.skills[ax] >= 50 ? 
-              'Okay' : 
-              lang.skills[ax] >= 30 ? 'Minimum' : 'None'
-              }
-            </span>
-          </div>
-        ))}
-      </div>
-
-      {/* Lang name */}
-      <div className="text-center mt-1">
-        <p className="font-mono font-bold text-base" style={{ color: lang.color }}>
-          {lang.name}
-        </p>
-        <p className="font-mono text-[9px] mt-0.5" style={{ color: `${lang.color}55` }}>
-          {lang.type}
-        </p>
-      </div>
-    </div>
-  );
-}
-
 export default function SkillsSection() {
   return (
-    <section id="skills" className=" py-24 px-6 md:px-16 lg:px-24">
+    <section id="skills" className="py-24 px-6 md:px-16 lg:px-24">
       <div className="w-full max-w-7xl mx-auto">
 
         {/* Section label */}
@@ -320,18 +157,16 @@ export default function SkillsSection() {
         </div>
 
         {/* ── Language Section ── */}
-        <div className="w-11/12 mx-auto mt-10 backdrop-blur-[1.5px]"
-        
-        >
-         <div
-  className="glow-card rounded-sm border p-6 flex flex-col gap-6"
-  style={{
-    borderColor: "#7C3AED20",
-    background: "#7C3AED05",
-    "--glow": `0 0 20px #7C3AED15, 0 0 60px #7C3AED08, inset 0 0 20px #7C3AED05`,
-    "--glow-border": "#7C3AED40",
-  }}
->
+        <div className="w-11/12 mx-auto mt-10 backdrop-blur-[1.5px]">
+          <div
+            className="glow-card rounded-sm border p-6 flex flex-col gap-6"
+            style={{
+              borderColor: "#7C3AED20",
+              background: "#7C3AED05",
+              "--glow": `0 0 20px #7C3AED15, 0 0 60px #7C3AED08, inset 0 0 20px #7C3AED05`,
+              "--glow-border": "#7C3AED40",
+            }}
+          >
             {/* Header */}
             <div className="border-b pb-4" style={{ borderColor: "#7C3AED15" }}>
               <h3 className="font-mono font-bold text-base tracking-wide" style={{ color: "#A78BFA" }}>
@@ -342,10 +177,37 @@ export default function SkillsSection() {
               </p>
             </div>
 
-            {/* Radar grid */}
+            {/* Simple Language Cards Grid */}
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
               {languages.map((lang) => (
-                <LanguageCard key={lang.name} lang={lang} />
+                <div
+                  key={lang.name}
+                  className="rounded-sm border p-4 flex flex-col items-center text-center justify-between gap-2 transition-transform duration-200 hover:-translate-y-1"
+                  style={{
+                    borderColor: `${lang.color}25`,
+                    background: `${lang.color}06`,
+                  }}
+                >
+                  <div className="flex flex-col items-center">
+                    <span className="font-mono font-bold text-lg" style={{ color: lang.color }}>
+                      {lang.name}
+                    </span>
+                    <span className="font-mono text-[10px] text-gray-400">
+                      ({lang.nativeName})
+                    </span>
+                  </div>
+
+                  <span
+                    className="font-mono text-xs font-medium px-2 py-0.5 rounded-sm mt-2 border"
+                    style={{
+                      color: lang.color,
+                      borderColor: `${lang.color}40`,
+                      background: `${lang.color}10`,
+                    }}
+                  >
+                    {lang.level}
+                  </span>
+                </div>
               ))}
             </div>
           </div>
@@ -358,14 +220,15 @@ export default function SkillsSection() {
 
 function CategoryCard({ cat }) {
   return (
-  <div
-  className="glow-card rounded-sm backdrop-blur-[1.5px] border p-6 flex flex-col gap-6"
-  style={{
-    borderColor: `${cat.accent}20`,
-    background: `${cat.accent}05`,
-    "--glow": `0 0 20px ${cat.accent}15, 0 0 60px ${cat.accent}08, inset 0 0 20px ${cat.accent}05`,
-    "--glow-border": `${cat.accent}40`,
-  }}>
+    <div
+      className="glow-card rounded-sm backdrop-blur-[1.5px] border p-6 flex flex-col gap-6"
+      style={{
+        borderColor: `${cat.accent}20`,
+        background: `${cat.accent}05`,
+        "--glow": `0 0 20px ${cat.accent}15, 0 0 60px ${cat.accent}08, inset 0 0 20px ${cat.accent}05`,
+        "--glow-border": `${cat.accent}40`,
+      }}
+    >
       {/* Card header */}
       <div className="border-b pb-4" style={{ borderColor: `${cat.accent}15` }}>
         <h3
